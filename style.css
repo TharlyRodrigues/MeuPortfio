@@ -123,7 +123,6 @@ header .container {
   display: flex;
   width: 100%;
   min-width: calc(var(--width) * var(--quantity));
-  position: relative;
 }
 .slider .list .item {
   width: var(--width);
