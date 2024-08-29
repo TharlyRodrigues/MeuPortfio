@@ -113,26 +113,55 @@ header .container {
   left: 0;
 }
 
-.scroll-infinite {
-  margin-top: 2rem;
+/* scroll infinite */
+.container-scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+.slider-name .slider-list-name {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+
 .slider,
 .slider-name {
+  align-items: center;
   width: 100%;
-  border: 1px solid red;
   height: var(--height);
+  border: 1px solid red;
+  overflow: hidden;
 }
 
 .slider .slider-list,
 .slider-name .slider-list-name {
   display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative;
 }
 
 .slider .slider-list .slider-item {
   width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 100%;
+  animation: autoRun 10s linear infinite;
+  animation-delay: calc((10s / var(--quantity)) * (var(--position)));
 }
 
-.slider-item i {
+.slider-name .slider-list-name .slider-item-name {
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  right: 110%;
+  animation: autoRun1 10s linear infinite;
+  animation-delay: calc((10s / var(--quantity)) * (var(--position)));
+}
+
+.slider .slider-list .slider-item i {
+  width: 100%;
   font-size: 4rem;
   color: var(--text-white);
   cursor: pointer;
@@ -140,6 +169,24 @@ header .container {
 
 .slider-item-name p {
   font-family: "Mona-Sans", sans-serif;
+  font-size: 0.8rem;
   color: var(--text-white);
   padding: 1rem;
+}
+
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+@keyframes autoRun1 {
+  from {
+    right: 100%;
+  }
+  to {
+    right: calc(var(--width) * -1);
+  }
 }
