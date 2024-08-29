@@ -130,7 +130,6 @@ header .container {
   align-items: center;
   width: 100%;
   height: var(--height);
-  border: 1px solid red;
   overflow: hidden;
 }
 
@@ -147,6 +146,7 @@ header .container {
   height: var(--height);
   position: absolute;
   left: 100%;
+  opacity: 1;
   animation: autoRun 10s linear infinite;
   animation-delay: calc((10s / var(--quantity)) * (var(--position)));
 }
@@ -155,7 +155,8 @@ header .container {
   width: var(--width);
   height: var(--height);
   position: absolute;
-  right: 110%;
+  right: 105%;
+  opacity: 1;
   animation: autoRun1 10s linear infinite;
   animation-delay: calc((10s / var(--quantity)) * (var(--position)));
 }
