@@ -1,0 +1,145 @@
+body {
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  background-color: var(--bg-prime);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  width: 100vw;
+  z-index: 10;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.toggle-menu,
+.close-menu {
+  display: none;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.nav-list .nav-link {
+  color: var(--text-white);
+  position: relative;
+  font-family: "Mona-Sans", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.nav-list .nav-link::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-green2);
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  transition: 0.1s ease-in-out;
+}
+
+.nav-list .nav-link:hover:after {
+  width: 100%;
+}
+
+/* HOME */
+.home .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.home .container .left img {
+  max-width: 120%;
+}
+
+.home .container .right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home .container .right h1 {
+  color: var(--text-white);
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+}
+
+.home .container .right p {
+  color: var(--color-green2);
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+
+.home .container .right p::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: var(--color-green2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.scroll-infinite {
+  margin-top: 2rem;
+}
+.slider,
+.slider-name {
+  width: 100%;
+  border: 1px solid red;
+  height: var(--height);
+}
+
+.slider .slider-list,
+.slider-name .slider-list-name {
+  display: flex;
+}
+
+.slider .slider-list .slider-item {
+  width: var(--width);
+}
+
+.slider-item i {
+  font-size: 4rem;
+  color: var(--text-white);
+  cursor: pointer;
+}
+
+.slider-item-name p {
+  font-family: "Mona-Sans", sans-serif;
+  color: var(--text-white);
+  padding: 1rem;
+}
