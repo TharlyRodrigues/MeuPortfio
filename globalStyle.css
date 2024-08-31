@@ -1,6 +1,7 @@
 :root {
   --text-green: #3cc638;
   --text-white: #ffffff;
+  --color-on: #ffffff;
   --bg-prime: #100f0e;
   --color-green: #3cc638;
   --color-green2: #93e541;
@@ -10,4 +11,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* class uteis */
+
+.icon {
+  font-size: 2.5rem;
+  color: var(--color-on);
 }
